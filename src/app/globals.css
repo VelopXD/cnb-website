@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 15, 15, 15;
+  --background-end-rgb: 26, 26, 26;
+  --accent-glow: 255, 0, 255;
+  --purple-glow: 138, 43, 226;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    135deg,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+@layer components {
+  .neon-border {
+    @apply border-2 border-cnb-accent shadow-[0_0_10px_theme(colors.cnb-accent)];
+  }
+
+  .neon-text {
+    @apply text-cnb-accent animate-glow;
+  }
+
+  .purple-glow {
+    @apply text-cnb-purple shadow-[0_0_10px_theme(colors.cnb-purple)];
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .card {
+    @apply bg-cnb-secondary rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-cnb-accent/20;
+  }
+
+  .button-primary {
+    @apply bg-cnb-accent text-white px-6 py-2 rounded-full hover:bg-opacity-80 transition-all duration-300 shadow-[0_0_10px_theme(colors.cnb-accent)];
+  }
+
+  .button-secondary {
+    @apply bg-transparent border-2 border-cnb-purple text-cnb-purple px-6 py-2 rounded-full hover:bg-cnb-purple hover:text-white transition-all duration-300 shadow-[0_0_10px_theme(colors.cnb-purple)];
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cnb-accent to-cnb-purple bg-clip-text text-transparent;
+  }
+}
