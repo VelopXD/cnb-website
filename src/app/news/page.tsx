@@ -24,7 +24,7 @@ const newsPosts: NewsPost[] = [
     category: 'Team Update',
     date: '2023-08-10',
     summary: 'Introducing our comprehensive training program for team members.',
-    content: 'We're excited to announce our new structured training program, designed to enhance individual skills and team coordination. The program includes daily practice sessions, strategy workshops, and personalized coaching.'
+    content: 'We\'re excited to announce our new structured training program, designed to enhance individual skills and team coordination. The program includes daily practice sessions, strategy workshops, and personalized coaching.'
   },
   {
     id: 3,
